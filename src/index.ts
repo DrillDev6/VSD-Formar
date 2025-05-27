@@ -1,15 +1,14 @@
-import express from "express";
+import express, {json} from "express";
 import { sequelize } from "./config/database";
-import User from "./Models/Users";
+import { userRouter} from "./routes/userRoutes"
 
 
 const app = express();
 const port = 3000;
 
-app.get("/", (req, res) => {
-  res.send("Hello World!");
-});
+app.use(json());
 
+app.use(userRouter);
 
 
 
@@ -24,9 +23,5 @@ async function main(){
     )
     });
 
-    //create users
-
-    const user = await User.create({name: 'Admin', email: 'admin@admin.com'});
-    console.log("Users created:", user.toJSON());
   }
 }
