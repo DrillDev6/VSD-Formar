@@ -1,0 +1,34 @@
+# Ignorar banco de dados local
+database.sqlite
+
+# Ignorar node_modules locais, serão instalados no container
+node_modules/
+
+# Ignorar arquivos de lock (opcional, se você quiser copiar, remova)
+package-lock.json
+
+# Ignorar pastas de build
+dist/
+build/
+
+# Ignorar arquivos de log
+*.log
+
+# Ignorar arquivos temporários e de backup
+*~
+*.tmp
+*.temp
+
+# Ignorar configurações de IDE
+.vscode/
+.idea/
+
+# Ignorar arquivos do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Ignorar arquivos de cobertura de testes (se existirem)
+coverage/
+
+# Ignorar arquivos de cache
+.cache/

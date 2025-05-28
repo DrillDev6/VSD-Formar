@@ -6,6 +6,9 @@ import {sequelize} from '../config/database';
 
 
 class Car extends Model {
+    static registry(carsData: { brand: string; model: string; year: number; plate: string; chassi: string; }) {
+        throw new Error("Method not implemented.");
+    }
     public id!: number;
     public brand!: string;
     public model!: string;
