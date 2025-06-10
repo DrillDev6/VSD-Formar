@@ -10,6 +10,6 @@ import {
 export const carRouter = Router()
 
 .get("/cars/:id", getCarById)
-.post("/cars/registry/:id", registryCar)
+.post("/cars/registry", registryCar)
 .patch("/update-car/:id", updateCar)
 .delete("/delete-car/:id", deleteCar);

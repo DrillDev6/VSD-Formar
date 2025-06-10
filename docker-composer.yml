@@ -3,16 +3,18 @@ version: '3.9'
 services:
   postgres:
     image: postgres:16
-    container_name: postgres_vsd_formar
+    container_name: postgres_vsd
     restart: always
     ports:
       - "5432:5432"
     environment:
-      POSTGRES_USER: adrieladm
+      POSTGRES_USER: adriel
       POSTGRES_PASSWORD: adriel123
-      POSTGRES_DB: vsd-formar
+      POSTGRES_DB: vemserdev
     volumes:
       - postgres_data:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+
 
 volumes:
   postgres_data:

@@ -1,6 +1,8 @@
 import express, {json} from "express";
 import { sequelize } from "./config/database";
 import { userRouter} from "./routes/userRoutes"
+import { carRouter} from "./routes/carRoutes"
+
 
 
 const app = express();
@@ -9,6 +11,7 @@ const port = 3000;
 app.use(json());
 
 app.use(userRouter);
+app.use(carRouter);
 
 
 

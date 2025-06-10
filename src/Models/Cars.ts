@@ -58,7 +58,8 @@ Car.init({
 }, 
 {
     sequelize,
-    modelName: 'Car',
+    modelName: 'Cars',
     tableName: 'cars',
+    timestamps: true     
 });
  export default  Car

@@ -1,10 +1,6 @@
-import {Sequelize} from 'sequelize'
+import { Sequelize } from 'sequelize';
 
-export const sequelize = new Sequelize({
-    dialect: 'postgres',
-   //config
-    host: 'localhost',
-    username: 'adrieladm',
-    password: '123456',
-    database: 'postgres_agender'
+export const sequelize = new Sequelize('vemserdev', 'adriel', 'adriel123', {
+  host: 'localhost',
+  dialect: 'postgres'
 });

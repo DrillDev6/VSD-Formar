@@ -19,12 +19,15 @@ User.init({
     },
     name: {
         type: DataTypes.STRING,
-},
+    },
     email: {
         type: DataTypes.STRING,
-    }}, {
-        sequelize,
-        modelName: 'User',
-        tableName: 'users',
+    }
+}, {
+    sequelize,
+    modelName: 'Users',
+    tableName: 'users',
+    timestamps: true
 });
- export default  User
+
+export default User
